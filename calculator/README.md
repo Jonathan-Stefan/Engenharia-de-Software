@@ -1,12 +1,18 @@
-# Projeto de uma calculadora usando JS + react + CSS + HTML
+### Calculadora usando JS + React + CSS + HTML
 
+# Instalação
+git clone https://github.com/Jonathan-Stefan/Engenharia-de-Software
+cd calculator
 
 # Instalar as dependencias
+
 npm install
 
-# Rodar o projeto
+# Executando o projeto
 
 npm start
+
+http://localhost:3000/
 
 
 ## Integrantes
