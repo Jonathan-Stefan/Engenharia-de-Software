@@ -23,7 +23,8 @@ jobs:
                   npm i
 
             - name: Run unit tests
-              run: | 
+              run: |
+                  cd calculator 
                   cd src
                   cd tests                    
                   npm test
