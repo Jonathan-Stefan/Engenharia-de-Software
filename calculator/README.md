@@ -21,4 +21,4 @@ npm run test
 
 ## Integrantes
 
-Jônathan Stefan Covelo de Carvalho - GEC1668
+Jônathan Stefan Covelo de Carvalho - GEC1668 
