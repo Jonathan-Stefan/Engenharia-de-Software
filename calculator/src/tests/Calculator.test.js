@@ -1,8 +1,11 @@
 const CalculatorMock = require('./CalculatorMock');
 
+// Cria uma swatich de testes
 describe('Calculator', () => {
+  // Variavel para armazenar a instancia da calculadora em cada teste
   let calculator;
 
+  // Função que sera executada antes de cada teste para garantir independencia entre os testes
   beforeEach(() => {
     calculator = new CalculatorMock();
   });

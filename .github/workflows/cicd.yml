@@ -24,10 +24,21 @@ jobs:
 
             - name: Run unit tests
               run: |
-                  cd calculator 
-                  cd src
-                  cd tests                    
+                  cd calculator
                   npm test
+
+            - name: Generate Test Report
+              run: |
+                  cd calculator
+                  jest --coverage --reporters=default --reporters=jest-html-reporter
+              env:
+                CI: true
+
+            - name: Upload Test Report
+              uses: actions/upload-artifact@v3
+              with:
+                name: test-report
+                path: calculator/coverage/test-report.html
 
     build:
       name: Build
@@ -48,4 +59,34 @@ jobs:
           - name: Run build
             run: |
                 cd calculator                                 
-                npm run build         
+                npm run build
+
+    report:
+        name: Generate and Upload Test Report
+        runs-on: ubuntu-latest
+        needs: test
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Use Node.js 20.11.1
+              uses: actions/setup-node@v4
+              with:
+                node-version: '20.11.1'
+
+            - name: Install dependencies
+              run: |
+                  cd calculator                                 
+                  npm i
+
+            - name: Generate Test Report
+              run: |
+                  cd calculator
+                  jest --coverage --reporters=default --reporters=jest-html-reporter
+              env:
+                CI: true
+
+            - name: Upload Test Report
+              uses: actions/upload-artifact@v3
+              with:
+                name: test-report
+                path: calculator/coverage/test-report.html
