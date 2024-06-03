@@ -76,4 +76,4 @@ jobs:
               uses: actions/upload-artifact@v3
               with:
                 name: test-report
-                path: calculator/coverage/test-report.html
+                path: calculator/coverage/lcov-report/index.html
