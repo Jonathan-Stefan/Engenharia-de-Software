@@ -68,7 +68,7 @@ jobs:
             - name: Generate Test Report
               run: |
                   cd calculator
-                  jest --coverage --reporters=default --reporters=jest-html-reporter
+                  npx jest --coverage
               env:
                 CI: true
 
