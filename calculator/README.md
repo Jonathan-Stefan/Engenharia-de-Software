@@ -15,8 +15,7 @@ npm start
 http://localhost:3000/
 
 # Testes
-cd src
-cd test
+
 npm run test
 
 ## Integrantes
