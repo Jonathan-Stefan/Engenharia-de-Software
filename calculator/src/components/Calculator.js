@@ -53,7 +53,7 @@ const Calculator = () => {
 
   return (    
     <div className="calculator">
-      <h1>Calculadora</h1> {"tela"}    
+      <h1>Calculadora</h1> {"display"}    
       <div className="display">{display}</div>
       <div className="buttons">
         <button onClick={() => handleButtonClick('7')}>7</button>
