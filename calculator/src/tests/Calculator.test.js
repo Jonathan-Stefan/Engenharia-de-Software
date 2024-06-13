@@ -51,4 +51,14 @@ describe('Calculator', () => {
     calculator.handleButtonClick('C');
     expect(calculator.getDisplay()).toBe('0');
   });
+
+  test('should display error message on division by zero', () => {
+    const calculator = new CalculatorMock();
+    calculator.handleButtonClick('5');
+    calculator.handleButtonClick('/');
+    calculator.handleButtonClick('0');
+    calculator.handleButtonClick('=');
+    expect(calculator.getDisplay()).toBe('Cannot divide by zero');
+});
+
 });
